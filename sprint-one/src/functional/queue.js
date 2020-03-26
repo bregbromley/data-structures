@@ -17,13 +17,10 @@ var Queue = function() {
   };
 
   someInstance.dequeue = function() {
-    console.log('storage', storage);
     var objArr = Object.keys(storage);
     var idx = Number(objArr[0]);
     var current = storage[idx];
     delete storage[idx];
-    console.log('stor:', storage);
-    console.log( 'current', current);
     return current;
   };
 

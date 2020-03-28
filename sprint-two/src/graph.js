@@ -66,4 +66,7 @@ Graph.prototype.forEachNode = function(cb) {
  * Complexity: What is the time complexity of the above functions?
  */
 
+Graph.prototype.countEdges = function() {
+  return this.edges.length;
+};
 

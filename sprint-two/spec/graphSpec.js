@@ -68,4 +68,14 @@ describe('graph', function() {
     expect(graph.hasEdge(3, 5)).to.equal(true);
     expect(graph.hasEdge(5, 5)).to.equal(true);
   });
+
+  it('should give the total number of edges', function() {
+    graph.addNode(1);
+    graph.addNode(2);
+    graph.addNode(3);
+    graph.addNode(4);
+    graph.addEdge(1, 2);
+    graph.addEdge(1, 3);
+    expect(graph.countEdges()).to.equal(2);
+  });
 });

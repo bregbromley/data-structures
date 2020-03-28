@@ -47,6 +47,13 @@ describe('hashTable', function() {
     window.getIndexBelowMaxForKey = oldHashFunction;
   });
 
+  it('should not contain values that were added twice and removed once', function() {
+    hashTable.insert('thing', 1);
+    hashTable.insert('thing', 1);
+    hashTable.remove('thing', 1);
+    expect(hashTable.retrieve('thing', 1)).to.equal(undefined);
+  });
+
   // (Advanced! Remove the extra "x" when you want the following tests to run)
   xit ('should double in size when needed', function() {
     _.each(people, function(person) {
